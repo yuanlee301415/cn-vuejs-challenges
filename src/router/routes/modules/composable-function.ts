@@ -27,7 +27,16 @@ const COMPOSABLE_FUNCTION_ROUTE: AppRouteRecordRaw = {
       meta: {
         title: "计数器"
       }
-    }
+    },
+
+	{
+      path: "18-uselocalstorage",
+      name: "18UselocalstoragePage",
+      component: () => import("@/views/composable-function/18-uselocalstorage.vue"),
+      meta: {
+        title: "实现本地存储函数"
+      }
+    },
 	]
 };
 
