@@ -30,13 +30,14 @@ const COMPOSABLE_FUNCTION_ROUTE: AppRouteRecordRaw = {
     },
 
 	{
-      path: "18-uselocalstorage",
-      name: "18UselocalstoragePage",
-      component: () => import("@/views/composable-function/18-uselocalstorage.vue"),
+      path: "18-uselocalstorage-customRef",
+      name: "18UselocalstoragecustomRefPage",
+      component: () => import("@/views/composable-function/18-uselocalstorage-customRef.vue"),
       meta: {
-        title: "实现本地存储函数"
+        title: "实现本地存储函数-customRef"
       }
     },
+
 	]
 };
 
