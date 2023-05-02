@@ -2,7 +2,7 @@
 defineProps({
   type: {
     validator(value) {
-      return ['primary', 'ghost', 'dashed', 'link', 'text', 'default'].indexOf(value)
+      return ['primary', 'ghost', 'dashed', 'link', 'text', 'default'].includes(value)
     },
     default: 'default'
   },
