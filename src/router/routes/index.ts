@@ -4,6 +4,7 @@ import { EXCEPTION_404, LAYOUT, PAGE_NOT_FOUND_NAME } from '@/router/constant'
 import ABOUT_ROUTE from '@/router/routes/modules/about'
 import TEST_ROUTE from '@/router/routes/modules/test'
 import COMPONENTS_ROUTE from "@/router/routes/modules/components";
+import COMPOSABLEFUNCTION_ROUTE from "@/router/routes/modules/composablefunction";
 // import NESTED_ROUTE from "@/router/routes/modules/nested";
 
 export const ROOT_ROUTE: AppRouteRecordRaw = {
@@ -60,6 +61,7 @@ export const basicRoutes = [
   ABOUT_ROUTE,
   TEST_ROUTE,
   COMPONENTS_ROUTE,
+COMPOSABLEFUNCTION_ROUTE,
 // NESTED_ROUTE,
   PAGE_NOT_FOUND_ROUTE
 ]
