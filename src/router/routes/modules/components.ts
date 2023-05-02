@@ -25,7 +25,7 @@ const COMPONENTS_ROUTE: AppRouteRecordRaw = {
       name: "218HRenderFunctionPage",
       component: () => import("@/views/components/218-h-render-function.vue"),
       meta: {
-        title: "渲染函数[h()]"
+        title: "渲染函数"
       }
     },
 
@@ -36,8 +36,17 @@ const COMPONENTS_ROUTE: AppRouteRecordRaw = {
       meta: {
         title: "函数式组件"
       }
+    },
+
+	{
+      path: "208-tree-component",
+      name: "208TreeComponentPage",
+      component: () => import("@/views/components/208-tree-component.vue"),
+      meta: {
+        title: "树组件"
+      }
     }
-    ]
+	]
 };
 
 export default COMPONENTS_ROUTE;
