@@ -18,8 +18,17 @@ const COMPONENTS_ROUTE: AppRouteRecordRaw = {
       meta: {
         title: "Prop验证"
       }
+    },
+
+	{
+      path: "218-h-render-function",
+      name: "218HRenderFunctionPage",
+      component: () => import("@/views/components/218-h-render-function.vue"),
+      meta: {
+        title: "渲染函数[h()]"
+      }
     }
-  ]
+    ]
 };
 
 export default COMPONENTS_ROUTE;
