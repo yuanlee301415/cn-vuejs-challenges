@@ -1,10 +1,61 @@
 <script setup lang="ts">
-interface TreeData {
-  key: string
-  title: string
-  children: TreeData[]
-}
-defineProps<{data: TreeData[]}>()
+import type {TreeData} from "./Tree.vue";
+import Tree from './Tree.vue'
+
+const treeData: TreeData[] = [
+  {
+    key: '1',
+    title: 'level_1',
+    children: [
+      {
+        key: '1-1',
+        title: 'level_1-1',
+        children: [
+          {
+            key: '1-1-1',
+            title: 'level_1-1-1',
+            children: [
+              {
+                key: '1-1-1-1',
+                title: 'level_1-1-1-1'
+              },
+              {
+                key: '1-11-2',
+                title: 'level_1-1-1-2'
+              },
+              {
+                key: '1-11-3',
+                title: 'level_1-1-1-3'
+              }
+            ]
+          }
+        ]
+      },
+      {
+        key: '1-2',
+        title: 'level_1-2',
+        children: [
+          {
+            key: '1-2-1',
+            title: 'level_1-2-1'
+          },
+          {
+            key: '1-2-2',
+            title: 'level_1-2-2'
+          }
+        ]
+      },
+      {
+        key: '1-3',
+        title: 'level_1-3'
+      }
+    ]
+  },
+  {
+    key: '2',
+    title: 'level_2',
+  }
+]
 </script>
 
 <template>
@@ -15,4 +66,5 @@ defineProps<{data: TreeData[]}>()
     <hr>
   </h2>
   <!-- do something.... -->
+  <Tree :data="treeData"/>
 </template>
