@@ -1,11 +1,16 @@
 <script setup lang='ts'>
+import {ref} from "vue";
 
 /**
  * 实现一个切换状态的可组合函数
  * 确保该功能正常工作
  */
-function useToggle() {
-
+function useToggle(initialValue: boolean) {
+  const state = ref(Boolean(initialValue))
+  function toggle() {
+    state.value = !state.value
+  }
+  return [state, toggle]
 }
 
 const [state, toggle] = useToggle(false)
