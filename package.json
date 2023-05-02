@@ -1,6 +1,7 @@
 {
-  "name": "vue3-ts-template",
-  "version": "1.0.7",
+  "name": "cn-vuejs-challenges",
+  "version": "0.1.0",
+  "description": "Vue.js 挑战集合",
   "private": true,
   "scripts": {
     "dev": "vite",

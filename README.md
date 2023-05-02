@@ -1,7 +1,8 @@
-# Vue3-Ts-Template
+# cn-vuejs-challenges
+# [Vue.js 挑战集合](https://cn-vuejs-challenges.netlify.app/)
 
 ```bash
-npm init vue@latest
+Forked from [Vue3-TS-Template]@v1.0.7
 ```
 
 ## Vue3 + TS 模板
