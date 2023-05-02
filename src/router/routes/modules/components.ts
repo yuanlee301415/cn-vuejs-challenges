@@ -27,6 +27,15 @@ const COMPONENTS_ROUTE: AppRouteRecordRaw = {
       meta: {
         title: "渲染函数[h()]"
       }
+    },
+
+	{
+      path: "21-functional-component",
+      name: "21FunctionalComponent",
+      component: () => import("@/views/components/21-functional-component.vue"),
+      meta: {
+        title: "函数式组件"
+      }
     }
     ]
 };
