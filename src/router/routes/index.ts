@@ -5,6 +5,7 @@ import ABOUT_ROUTE from '@/router/routes/modules/about'
 import TEST_ROUTE from '@/router/routes/modules/test'
 import COMPONENTS_ROUTE from "@/router/routes/modules/components";
 import COMPOSABLE_FUNCTION_ROUTE from "@/router/routes/modules/composable-function";
+import COMPOSITION_API_ROUTE from "@/router/routes/modules/composition-api";
 // import NESTED_ROUTE from "@/router/routes/modules/nested";
 
 export const ROOT_ROUTE: AppRouteRecordRaw = {
@@ -62,6 +63,7 @@ export const basicRoutes = [
   TEST_ROUTE,
   COMPONENTS_ROUTE,
 COMPOSABLE_FUNCTION_ROUTE,
+COMPOSITION_API_ROUTE,
 // NESTED_ROUTE,
   PAGE_NOT_FOUND_ROUTE
 ]
