@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import type { Ref } from "vue";
-import {onMounted, inject, ref} from "vue"
+import {onMounted, inject, onUnmounted} from "vue"
 
 const timer = inject<Ref<number>>('timer')
 const count = inject<Ref<number>>('count')
@@ -10,6 +10,10 @@ onMounted(() => {
   timer!.value = window.setInterval(() => {
     count!.value++
   }, 1000)
+})
+
+onUnmounted(() => {
+  clearInterval(timer?.value)
 })
 
 </script>
