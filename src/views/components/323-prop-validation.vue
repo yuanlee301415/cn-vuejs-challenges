@@ -1,6 +1,11 @@
 <script setup>
 defineProps({
-  type: {},
+  type: {
+    validator(value) {
+      return ['primary', 'ghost', 'dashed', 'link', 'text', 'default'].indexOf(value)
+    },
+    default: 'default'
+  },
 })
 </script>
 
