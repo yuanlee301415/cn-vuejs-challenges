@@ -47,6 +47,15 @@ const COMPOSABLE_FUNCTION_ROUTE: AppRouteRecordRaw = {
       }
     },
 
+	
+	{
+      path: "25-usemouse",
+      name: "25UsemousePage",
+      component: () => import("@/views/composable-function/25-usemouse.vue"),
+      meta: {
+        title: "鼠标坐标"
+      }
+    }
 	]
 };
 
