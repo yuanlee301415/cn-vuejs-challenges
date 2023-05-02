@@ -18,8 +18,17 @@ const COMPOSABLE_FUNCTION_ROUTE: AppRouteRecordRaw = {
       meta: {
         title: "切换器"
       }
+    },
+
+	{
+      path: "17-usecounter",
+      name: "17UsecounterPage",
+      component: () => import("@/views/composable-function/17-usecounter.vue"),
+      meta: {
+        title: "计数器"
+      }
     }
-  ]
+	]
 };
 
 export default COMPOSABLE_FUNCTION_ROUTE;
