@@ -1,11 +1,26 @@
-<script setup>
-import {watch} from "vue"
+<script setup lang="ts">
+import {customRef, watch} from "vue"
 
 /**
  * 补全以下函数来实现防抖ref :
  */
-function useDebouncedRef(value, delay = 200) {
-
+function useDebouncedRef<T = string>(value: T, delay = 200) {
+  let timer: number | undefined
+  return customRef((track, trigger) => {
+    return {
+      get() {
+        track()
+        return value
+      },
+      set(newValue) {
+        clearTimeout(timer)
+        timer = setTimeout(() => {
+          trigger()
+          value = newValue
+        }, delay)
+      }
+    }
+  })
 }
 
 const text = useDebouncedRef("hello")
