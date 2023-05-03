@@ -1,13 +1,14 @@
 <script setup lang="ts">
-import type {Ref} from "vue";
-import {ref, reactive} from "vue"
+import type {Ref, UnwrapRef} from "vue";
+import {ref, reactive, isRef, unref, toRef} from "vue"
 
 const initial = ref(10)
 const count = ref(0)
 
 // 挑战 1: 更新 ref
-function update(value) {
+function update(value: UnwrapRef<number>) {
   // 实现...
+  count.value = value
 }
 
 /**
@@ -16,6 +17,7 @@ function update(value) {
  */
 console.log('1:',
     // impl ? 1 : 0
+    isRef(count) ? 1 : 0
 )
 
 /**
@@ -24,7 +26,7 @@ console.log('1:',
  */
 function initialCount(value: number | Ref<number>) {
   // 确保以下输出为true
-  console.log('initialCount>true:', value === 10)
+  console.log('initialCount>true:', unref(value) === 10)
 }
 
 initialCount(initial)
@@ -39,7 +41,7 @@ const state = reactive({
   foo: 1,
   bar: 2,
 })
-const fooRef = ref() // 修改这里的实现...
+const fooRef = toRef(state, 'foo') // 修改这里的实现...
 
 // 修改引用将更新原引用
 fooRef.value++
