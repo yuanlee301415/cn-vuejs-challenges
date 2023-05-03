@@ -10,7 +10,7 @@ function useToggle(initialValue: boolean) {
   function toggle() {
     state.value = !state.value
   }
-  return [state, toggle]
+  return [state, toggle] as const
 }
 
 const [state, toggle] = useToggle(false)
