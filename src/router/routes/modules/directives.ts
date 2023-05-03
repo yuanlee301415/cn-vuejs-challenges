@@ -19,7 +19,16 @@ const DIRECTIVES_ROUTE: AppRouteRecordRaw = {
         title: "大写"
       }
     },
-  ]
+  
+	{
+      path: "12-optimize-perf-directive",
+      name: "12OptimizePerfDirectivePage",
+      component: () => import("@/views/directives/12-optimize-perf-directive.vue"),
+      meta: {
+        title: "优化性能的指令"
+      }
+    },
+	]
 };
 
 export default DIRECTIVES_ROUTE;
