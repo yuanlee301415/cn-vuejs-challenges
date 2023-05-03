@@ -73,6 +73,15 @@ const COMPOSITION_API_ROUTE: AppRouteRecordRaw = {
         title: "Effect作用域API"
       }
     },
+	
+	{
+      path: "23-custom-ref",
+      name: "23CustomRefPage",
+      component: () => import("@/views/composition-api/23-custom-ref.vue"),
+      meta: {
+        title: "自定义ref"
+      }
+    },
 	]
 };
 
