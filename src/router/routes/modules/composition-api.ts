@@ -18,8 +18,17 @@ const COMPOSITION_API_ROUTE: AppRouteRecordRaw = {
       meta: {
         title: "生命周期钩子"
       }
-    }
-  ]
+    },
+
+	{
+      path: "3-losing-reactivity",
+      name: "3LosingReactivityPage",
+      component: () => import("@/views/composition-api/3-losing-reactivity.vue"),
+      meta: {
+        title: "响应性丟失"
+      }
+    },
+	]
 };
 
 export default COMPOSITION_API_ROUTE;
