@@ -2,7 +2,14 @@
 import {ref, computed} from "vue"
 
 const count = ref(1)
-const plusOne = computed(() => count.value + 1)
+const plusOne = computed({
+  get() {
+    return count.value + 1
+  },
+  set(val) {
+    count.value = val - 1
+  }
+})
 
 /**
  * 确保 `plusOne` 可以被写入。
