@@ -28,6 +28,15 @@ const DIRECTIVES_ROUTE: AppRouteRecordRaw = {
         title: "优化性能的指令"
       }
     },
+	
+	{
+      path: "19-v-focus",
+      name: "19VFocusPage",
+      component: () => import("@/views/directives/19-v-focus.vue"),
+      meta: {
+        title: "切换焦点指令"
+      }
+    },
 	]
 };
 
