@@ -16,5 +16,5 @@ setInterval(() => {
     <hr>
   </h2>
 
-  <span>使它从不更新: {{ count }}</span>
+  <span v-once>使它从不更新: {{ count }}</span>
 </template>
