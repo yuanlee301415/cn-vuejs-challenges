@@ -11,7 +11,7 @@
 export interface TreeData {
   key: string
   title: string
-  children: TreeData[]
+  children?: TreeData[]
 }
 
 const props = defineProps<{ data: TreeData[] }>()
