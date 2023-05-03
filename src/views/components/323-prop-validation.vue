@@ -1,7 +1,7 @@
 <script setup lang="ts">
 defineProps({
   type: {
-    validator(value) {
+    validator(value: string) {
       return ['primary', 'ghost', 'dashed', 'link', 'text', 'default'].includes(value)
     },
     default: 'default'
