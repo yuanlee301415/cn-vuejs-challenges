@@ -64,6 +64,15 @@ const COMPOSITION_API_ROUTE: AppRouteRecordRaw = {
         title: "浅层ref-triggerRef"
       }
     },
+	
+	{
+      path: "8-effect-scope",
+      name: "8EffectScopePage",
+      component: () => import("@/views/composition-api/8-effect-scope.vue"),
+      meta: {
+        title: "Effect作用域API"
+      }
+    },
 	]
 };
 
