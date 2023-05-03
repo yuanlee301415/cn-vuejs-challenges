@@ -7,8 +7,9 @@ const count = ref(0)
  * 挑战 1: Watch 一次
  * 确保副作用函数只执行一次
  */
-watch(count, () => {
+const unWatchCount = watch(count, () => {
   console.log("Only triggered once")
+  unWatchCount()
 })
 
 count.value = 1
@@ -22,7 +23,7 @@ const state = ref({
   count: 0,
 })
 
-watch(state, () => {
+watch(() => state.value.count, () => {
   console.log("The state.count updated")
 })
 
@@ -32,11 +33,12 @@ state.value.count = 2
  * 挑战 3: 副作用函数刷新时机
  * 确保正确访问到更新后的`eleRef`值
  */
-
 const eleRef = ref()
 const age = ref(2)
 watch(age, () => {
-  console.log(eleRef.value)
+  console.log('eleRef:', eleRef.value)
+}, {
+  flush: 'post'
 })
 age.value = 18
 
