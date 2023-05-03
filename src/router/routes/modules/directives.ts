@@ -37,6 +37,15 @@ const DIRECTIVES_ROUTE: AppRouteRecordRaw = {
         title: "切换焦点指令"
       }
     },
+	
+	{
+      path: "20-v-debounce-click",
+      name: "20VDebounceClickPage",
+      component: () => import("@/views/directives/20-v-debounce-click.vue"),
+      meta: {
+        title: "防抖点击指令"
+      }
+    },
 	]
 };
 
