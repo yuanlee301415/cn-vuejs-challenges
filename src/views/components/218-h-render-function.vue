@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import MyButton from "./MyButton.ts"
+import MyButton from "./MyButton"
 const onClick = (evt: Event) => {
   console.log('onClick', evt)
 }
