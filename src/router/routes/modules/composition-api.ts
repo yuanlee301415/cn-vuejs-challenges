@@ -20,6 +20,15 @@ const COMPOSITION_API_ROUTE: AppRouteRecordRaw = {
       }
     },
 
+    {
+      path: "2-ref-family",
+      name: "2RefFamilyPage",
+      component: () => import("@/views/composition-api/2-ref-family.vue"),
+      meta: {
+        title: "ref全家桶"
+      }
+    },
+
 	{
       path: "3-losing-reactivity",
       name: "3LosingReactivityPage",
@@ -64,7 +73,7 @@ const COMPOSITION_API_ROUTE: AppRouteRecordRaw = {
         title: "浅层ref-triggerRef"
       }
     },
-	
+
 	{
       path: "8-effect-scope",
       name: "8EffectScopePage",
@@ -73,7 +82,7 @@ const COMPOSITION_API_ROUTE: AppRouteRecordRaw = {
         title: "Effect作用域API"
       }
     },
-	
+
 	{
       path: "23-custom-ref",
       name: "23CustomRefPage",
