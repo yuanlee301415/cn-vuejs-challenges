@@ -1,15 +1,28 @@
 <script setup lang='ts'>
-import { ref } from "vue"
+import {ref, watch} from "vue"
 
-const state = ref(false)
+const state = ref(true)
 
 /**
  * 实现一个自定义指令,让元素获取焦点
  * 确保当切换`state`时,元素随着状态值获取/失去焦点
  *
  */
-const VFocus = {
+function focus(el: HTMLElement, isFocus: boolean): void {
+  if (isFocus) {
+    el.focus()
+  } else {
+    el.blur()
+  }
+}
 
+const VFocus = {
+  mounted(el: HTMLElement, binding: { value: boolean }) {
+    focus(el, binding.value)
+    watch(state, value => {
+      focus(el, value)
+    })
+  }
 }
 
 setInterval(() => {
