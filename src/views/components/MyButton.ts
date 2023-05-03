@@ -1,18 +1,18 @@
-import type {SetupContext} from "vue";
-import {h} from 'vue'
+import {h, defineComponent} from 'vue'
 
-type Props = {
-    disabled: boolean
-}
-
-export default {
-    props: ['disabled'],
+export default defineComponent({
+    props: {
+        disabled: {
+            type: Boolean,
+            default: false
+        }
+    },
     emits: ['customClick'],
-    setup(props: Props, {slots, emit}: SetupContext) {
+    setup(props, {slots, emit}) {
         console.log('props:', props)
         return () => h('button', {
             disabled: props.disabled,
             onclick: (event: Event) => emit('customClick', event)
         }, slots.default?.())
     }
-}
+})
