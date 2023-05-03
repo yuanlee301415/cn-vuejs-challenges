@@ -46,6 +46,15 @@ const COMPOSITION_API_ROUTE: AppRouteRecordRaw = {
         title: "watch全家桶"
       }
     },
+	
+	{
+      path: "6-shallow-ref",
+      name: "6ShallowRefPage",
+      component: () => import("@/views/composition-api/6-shallow-ref.vue"),
+      meta: {
+        title: "浅层ref"
+      }
+    },
 	]
 };
 
