@@ -64,6 +64,15 @@ const DIRECTIVES_ROUTE: AppRouteRecordRaw = {
         title: "激活的样式-指令_WatchEffect"
       }
     },
+	
+	{
+      path: "26-v-model",
+      name: "26VModelPage",
+      component: () => import("@/views/directives/26-v-model.vue"),
+      meta: {
+        title: "实现简易版`v-model`指令"
+      }
+    },
 	]
 };
 
