@@ -46,6 +46,15 @@ const DIRECTIVES_ROUTE: AppRouteRecordRaw = {
         title: "防抖点击指令"
       }
     },
+	
+	{
+      path: "24-v-active-style",
+      name: "24VActiveStylePage",
+      component: () => import("@/views/directives/24-v-active-style.vue"),
+      meta: {
+        title: "激活的样式-指令"
+      }
+    },
 	]
 };
 
