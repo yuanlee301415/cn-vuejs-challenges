@@ -19,7 +19,7 @@ const DIRECTIVES_ROUTE: AppRouteRecordRaw = {
         title: "大写"
       }
     },
-  
+
 	{
       path: "12-optimize-perf-directive",
       name: "12OptimizePerfDirectivePage",
@@ -28,7 +28,7 @@ const DIRECTIVES_ROUTE: AppRouteRecordRaw = {
         title: "优化性能的指令"
       }
     },
-	
+
 	{
       path: "19-v-focus",
       name: "19VFocusPage",
@@ -37,7 +37,7 @@ const DIRECTIVES_ROUTE: AppRouteRecordRaw = {
         title: "切换焦点指令"
       }
     },
-	
+
 	{
       path: "20-v-debounce-click",
       name: "20VDebounceClickPage",
@@ -46,13 +46,22 @@ const DIRECTIVES_ROUTE: AppRouteRecordRaw = {
         title: "防抖点击指令"
       }
     },
-	
+
 	{
-      path: "24-v-active-style",
-      name: "24VActiveStylePage",
-      component: () => import("@/views/directives/24-v-active-style.vue"),
+      path: "24-v-active-style_watch-fn",
+      name: "24VActiveStyleWatchFnPage",
+      component: () => import("@/views/directives/24-v-active-style_watch-fn.vue"),
       meta: {
-        title: "激活的样式-指令"
+        title: "激活的样式-指令_Watch-fn"
+      }
+    },
+
+    {
+      path: "24-v-active-style_watchEffect",
+      name: "24VActiveStyleWatchEffectPage",
+      component: () => import("@/views/directives/24-v-active-style_watchEffect.vue"),
+      meta: {
+        title: "激活的样式-指令_WatchEffect"
       }
     },
 	]
