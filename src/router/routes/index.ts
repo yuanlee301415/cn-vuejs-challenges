@@ -9,6 +9,7 @@ import COMPOSITION_API_ROUTE from "@/router/routes/modules/composition-api";
 import DIRECTIVES_ROUTE from "@/router/routes/modules/directives";
 import EVENT_HANDLING_ROUTE from "@/router/routes/modules/event-handling";
 import GLOBAL_API_ROUTE from "@/router/routes/modules/global-api";
+import REACTIVITY_ADVANCED_ROUTE from "@/router/routes/modules/reactivity-advanced";
 // import NESTED_ROUTE from "@/router/routes/modules/nested";
 
 export const ROOT_ROUTE: AppRouteRecordRaw = {
@@ -70,6 +71,7 @@ COMPOSITION_API_ROUTE,
 DIRECTIVES_ROUTE,
 EVENT_HANDLING_ROUTE,
 GLOBAL_API_ROUTE,
+REACTIVITY_ADVANCED_ROUTE,
 // NESTED_ROUTE,
   PAGE_NOT_FOUND_ROUTE
 ]
