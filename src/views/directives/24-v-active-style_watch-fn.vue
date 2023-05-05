@@ -18,6 +18,7 @@ const handle = (el: ElType, binding: Binding) => {
 
   el.__stop__ = watch(fn, (value) => {
     for (const [key, style] of Object.entries(styleObj)) {
+      // Todo: TS 类型
       // @ts-ignore
       el.style[key] = value ? style : null
     }

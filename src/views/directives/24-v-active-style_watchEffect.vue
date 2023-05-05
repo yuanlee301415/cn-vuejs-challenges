@@ -19,6 +19,7 @@ const handle = (el: ElType, binding: Binding) => {
   el.__stop__ = watchEffect(() => {
     for (const [key, style] of Object.entries(styleObj)) {
       // el.style[key] = fn() ? style : null // Error: TS7015: Element implicitly has an 'any' type because index expression is not of type 'number'.
+      // Todo: TS 类型
       // @ts-ignore
       el.style[key] = fn() ? style : null
     }

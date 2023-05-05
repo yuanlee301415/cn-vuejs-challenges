@@ -15,6 +15,7 @@ const VOhModel: Directive<ElType, string> = {
     console.log('binding:', binding)
     el.value = binding.value
     el.__handleInput__ = function (evt: Event) {
+      // Todo: TS 类型
       (binding.instance as any).value = (evt.target as HTMLInputElement).value
     }
     el.addEventListener('input', el.__handleInput__)
