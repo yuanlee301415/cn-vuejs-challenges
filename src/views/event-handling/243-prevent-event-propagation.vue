@@ -17,9 +17,9 @@ const click2 = () => {
     在这个挑战中，你需要阻止点击事件的冒泡，让我们开始吧。
     <hr>
   </h2>
-  
+
   <div @click="click1()">
-    <div @click="click2()">
+    <div @click.stop="click2()">
       click me
     </div>
   </div>
