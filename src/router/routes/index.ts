@@ -7,6 +7,7 @@ import COMPONENTS_ROUTE from "@/router/routes/modules/components";
 import COMPOSABLE_FUNCTION_ROUTE from "@/router/routes/modules/composable-function";
 import COMPOSITION_API_ROUTE from "@/router/routes/modules/composition-api";
 import DIRECTIVES_ROUTE from "@/router/routes/modules/directives";
+import EVENT_HANDLING_ROUTE from "@/router/routes/modules/event-handling";
 // import NESTED_ROUTE from "@/router/routes/modules/nested";
 
 export const ROOT_ROUTE: AppRouteRecordRaw = {
@@ -66,6 +67,7 @@ export const basicRoutes = [
 COMPOSABLE_FUNCTION_ROUTE,
 COMPOSITION_API_ROUTE,
 DIRECTIVES_ROUTE,
+EVENT_HANDLING_ROUTE,
 // NESTED_ROUTE,
   PAGE_NOT_FOUND_ROUTE
 ]
