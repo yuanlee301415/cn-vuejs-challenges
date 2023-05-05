@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import {ref} from "vue"
+import {ref, nextTick} from "vue"
 
 const count = ref(0)
 
@@ -10,8 +10,10 @@ function increment() {
    * DOM还未更新,如何确保DOM已经更新 ?
    * 请保证以下输出为true
    */
-  // @ts-ignore
-  console.log(+document.getElementById("counter").textContent === 1)
+  nextTick(() => {
+    // @ts-ignore
+    console.log(+document.getElementById("counter").textContent === 1)
+  })
 }
 </script>
 
