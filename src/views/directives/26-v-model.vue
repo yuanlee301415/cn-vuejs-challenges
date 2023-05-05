@@ -1,5 +1,5 @@
 <script setup lang='ts'>
-
+import type {Directive} from "vue";
 import {ref} from "vue"
 
 /**
@@ -7,9 +7,26 @@ import {ref} from "vue"
  * 在表单输入元素和数据间创建双向绑定
  *
  */
-const VOhModel = {}
+type ElType = HTMLInputElement & {
+  __handleInput__: (e: Event) => void
+}
+const VOhModel: Directive<ElType, string> = {
+  mounted(el, binding) {
+    console.log('binding:', binding)
+    el.value = binding.value
+    el.__handleInput__ = function (evt: Event) {
+      (binding.instance as any).value = (evt.target as HTMLInputElement).value
+    }
+    el.addEventListener('input', el.__handleInput__)
+  },
+  beforeUnmount(el) {
+    el.removeEventListener('click', el.__handleInput__)
+  }
+}
 
 const value = ref("Hello Vue.js")
+
+defineExpose({value})
 
 </script>
 
