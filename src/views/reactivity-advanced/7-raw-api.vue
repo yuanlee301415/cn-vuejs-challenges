@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import {reactive, isReactive} from "vue"
+import {reactive, isReactive, toRaw, markRaw} from "vue"
 
 const state = {count: 1}
 const reactiveState = reactive(state)
@@ -7,12 +7,12 @@ const reactiveState = reactive(state)
 /**
  * 修改以下代码使输出为true
  */
-console.log('===:', reactiveState === state)
+console.log('===:', toRaw(reactiveState) === state)
 
 /**
  * 修改以下代码使输出为false
  */
-const info = {count: 1}
+const info = markRaw({count: 1})
 const reactiveInfo = reactive(info)
 
 console.log('isReactive:', isReactive(reactiveInfo))
