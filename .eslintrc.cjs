@@ -13,7 +13,8 @@ module.exports = {
     ecmaVersion: 'latest'
   },
   rules: {
-    "vue/multi-word-component-names": 0
+    "vue/multi-word-component-names": 0,
+    "vue/valid-v-model": 0
   },
   "globals": {
     "__APP_VERSION__": "readonly",
